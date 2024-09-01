@@ -1,6 +1,7 @@
 export default {
     dgo_blue_100:"#333399",
     dgo_blue_200: "#387CFF",
+    dgo_blue_300: "#85B6FF",
     dgo_black_100:'#212532',
     dgo_black_200:'#64748B',
     dgo_black_300:'#B9BCC7',
@@ -9,5 +10,6 @@ export default {
     dgo_green_200:'#50D75D',
     dgo_white_600:"#FFFFFF",
     dgo_red_100:'#F83131',
+    dgo_red_200:'#FF7D7D',
     dgo_yellow_100:'#F4AE02',
   };

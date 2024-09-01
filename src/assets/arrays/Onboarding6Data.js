@@ -1,0 +1,35 @@
+const Onboarding6Data=[
+    {
+        id:1,
+        text:'Serfing'
+    },
+    {
+        id:2,
+        text:'Beaches'
+    },
+    {
+        id:32,
+        text:'Trekking'
+    },
+    {
+        id:4,
+        text:'Camping'
+    },
+    {
+        id:5,
+        text:'Culture'
+    },
+    {
+        id:6,
+        text:'Food'
+    },
+    {
+        id:7,
+        text:'History'
+    },
+    {
+        id:8,
+        text:'Safary'
+    },
+]
+export default Onboarding6Data

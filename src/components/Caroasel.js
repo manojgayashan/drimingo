@@ -41,7 +41,7 @@ export default function Carousel({ data, currentIndex, autoPlay, autoPlayInterva
         // console.log(curr)
 
 
-      }, 10000);
+      }, 3000);
 
     }
     else {
@@ -87,7 +87,13 @@ export default function Carousel({ data, currentIndex, autoPlay, autoPlayInterva
           {data.map((d, index) => (
             <View key={index} style={CommanStyles.fullWindowView}>
               <ImageBackground source={d.image} style={CommanStyles.fullWindowView} imageStyle={{ borderRadius: 10 }}>
-                <LinearGradient colors={[Colors.dgo_black_100, 'transparent', Colors.dgo_black_100]} style={CommanStyles.fullWindowView}>
+                <LinearGradient colors={[Colors.dgo_black_100, 'transparent', Colors.dgo_black_100]} style={[CommanStyles.fullWindowView,{paddingTop:100}]}>
+
+                <View style={CommanStyles.center}>
+                        <Image source={require('../assets/images/drimingo_logo.png')} style={CommanStyles.onboardingLogo} />
+                        <Text style={CommanStyles.onboardingTitle}>{d.title}</Text>
+                        <Text style={CommanStyles.onboardingSubTitle}>{d.subTitle}</Text>
+                    </View>
 
                 </LinearGradient>
               </ImageBackground>

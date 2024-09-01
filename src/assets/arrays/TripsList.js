@@ -1,31 +1,67 @@
 const TripsList =[
     {
-        title:'Pinnawala, Sri Lanka',
-        destinations:5,
-        duration:8,
-        date:'2024-05-25',
-        imageUrl:'https://s3-alpha-sig.figma.com/img/0331/ae13/7551c2148cca3dd37150a3026de8796f?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J8a2stLnl~dOdk5zCV9hNotrYF2WM4l7xl3hDNn7xdPj7x4UQcxUjyeQ3ehTSr3aFHjw8qfXpe8uyHPiMWlnJiIeKTF4f0GLjdMEoJmcCiz5dcKzxYY-3Z87BpKIu2tl5Ps~pLiiWmhOFO8auu5Mruln9Ieu3tc4mLOcYjCNUu7JQNue-Dsdf2suAa~ZgEuejOgTa0Vriol7vODWebyklfjRFoKYm3frBYuFVFq~KgsyACU6j6W1dWP3eYJ10G-19sPAhZJ1OZmvkyyCQbpvjX~rbQEh-r4C~YxCEVa2qN6MPbRzWQ0i3MXd~Z2ZQYeMVqxNwR6no0Z1cGMjw9tnPw__'
-    },
-    {
-        title:'Sigiriya, Sri Lanka',
-        destinations:8,
-        duration:12,
-        date:'2024-06-09',
-        imageUrl:'https://s3-alpha-sig.figma.com/img/6658/3262/6d9b6e32127391b448bd92a5d7518262?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YXdtXRcystNmruxzZksKyI84VKnUTUPUN65kmABnLAUcz1aVEt4LBw2gEIFLFFKyrR~DHrHSUrP0r3FUVmq0OBfhNsrMQe4vbpbrlYhnPmPswFOcsFTMG0Az~J2LiAMpu6HmUAKFwljVGdnvpMK4SDXIHmqG2~hkbowT~Q9By5tNHCS3DOHFdBfHEV~fb~dxu-u8JlE3ZVqsfd~uZE1w5OaxwFk~kN9NJxqN1RFVkxX-X4~-csTDzvUp08v3BVZ6HE-QQGcgGp~UgP4ydfxUH30nb1CK5MsgfogTTBi-tkZ1EZ~whowhLBBGul8xTIp~w96WEvZfE6Reh51oZyQAfg__'
-    },
-    {
-        title:'Down South, Sri Lanka',
-        destinations:4,
-        duration:6,
-        date:'2024-07-20',
-        imageUrl:'https://s3-alpha-sig.figma.com/img/3ae5/a0c4/f7aa05cc6ccdafeda1976870aa538366?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DFJSgpGWdk~Iq3W4Wd4PP8p2SJpiVDj78vRHEaQH0R4ZAas7eQ-azzv-V3ZV9pIRTTkMRbqjeNYfbTKWNksAvU7NmdxrWBI7I4nltNfRbHege~GgIrsJhe93goNBuxA6lFpwXxP-uzWmm0TS3GMjHalrF90l120y71RQmYd~~x4XtE7tk2XEdK2YS~DQOAaklvILJFtaqGbJTuxlW3jmdio-7BT8zHURYsJegu9vmEbbnO6pk6lY7uKhsuDn3h7kcqgc0ju4amkHG2D1051AnehjCUvBKsnmntJ7lNwvQsgmISUKhUHKVI5jShVowv3yEm4WHhicb6CAdDuC5XqjyA__'
-    },
-    {
+        id:1,
         title:'Ella, Sri Lanka',
         destinations:5,
         duration:812,
-        date:'2024-07-30',
-        imageUrl:'https://s3-alpha-sig.figma.com/img/1362/83e8/eedd293717af8d09f05fa1947357041e?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kN7oy74q7HZGu9CZeZJHrB8wRsnWGodXxEEH-KBXeq2jKGlbeAliXVrhu1bRtnZ53upMElZTZCVF~~cUIoWJOMmbR~X4xxLeTRhQnmwpY8ar1E4T8a9kWQhSICg8mgRZ6NQdM-8P2idqZ7NH0-m8fvg700isbMJ~8q3njF~8Sv4NRm8Oi3J9HUo7FjSAoJum6d5Y-e1GIIdZ98sHWpGJlMt3PPcy4VjpZA0jX98bL-sgjxgSNThHJpGLyGfnz2NxBtqIDTFHGb43y9UlIOVocR9qSA6FK6SnTq98qvgRe4p5TKrgqnD4fgCOSblcALRcIp03fLceYKClvD7n5gQZ5w__'
+        date:'2024-09-30',
+        imageUrl:'https://s3-alpha-sig.figma.com/img/0c3f/cd2b/27f5fc931d63c6ad499fa6ab6e3eca8b?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WJTLohBuetvOY3gHgFNFq9jPU3Y~t-5UGYwIaNBYgcovOauGn021qmiceeOefrnECMWT8lLTAtCxIWcqO0nnDbRnlxGNp5OJv2guz2zmeKnti5yEdhPOqRbYm6mXe8dMxSsOigxmzw~8aKtXT66ZteABH86GhLBQUAO7snHA-RoAtrIAl80s~W8VXYmH5bGW6NmWvOYwjbGVhaQp2zEuGvoxK-ajtlPJ9tX3PRYx3FzK8WGkMqQEU7uXmomGypCFgxDrco~UGMob62Ozvt9n6BUpBgTiC-GqRW5XSJKI9zeb1eXDzO8-gcDbWjXnhY5sCdy8qQUW8MFxXdp6imw2ZQ__',
+        description:'Ella is a small town in the Badulla District of Uva Province, Sri Lanka governed by an Urban Council.\n \nIt is approximately 200 km east of Colombo and is situated at an elevation of 1,041 m above sea level. The area has a rich bio-diversity, dense with numerous varieties of flora and fauna.\n \nElla is surrounded by hills covered with cloud forests and tea plantations. The town has a cooler climate than surrounding lowlands, due to its elevation. The Ella Gap allows views across the southern plains of Sri Lanka.',
+        country:'Sri Lanka',
+        district:'Badulla',
+        elevation:1041,
+        postalCode:'90090',
+        latitude:'6.8736058',
+        longtitude:'81.0489927',
+        province:'Uva '
+    },
+    {
+        id:2,
+        title:'Pinnawala, Sri Lanka',
+        destinations:5,
+        duration:8,
+        date:'2024-09-25',
+        imageUrl:'https://s3-alpha-sig.figma.com/img/0331/ae13/7551c2148cca3dd37150a3026de8796f?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bzQlRa3EB~omHOVXrfbsTjQj89cgR-n1aO0ACuGDfZ9wV8m1VSbV8cproviQRUrYm0KdBcpcM8i-MIyNu9YuuGH1kZuyfgyq1MUgiyudNDB33S0S68Sd67FeZCvwmbqPzNeai5eYHG0RFl5hgOEdeYfSmtMXd1AYcPi05jFB3-etbg6SeJCi6~E8F-nC2HSJp7e~K5n4IJLrMJfC9QbNNXBAoAW~xQdnuZXCmWLpfCuRnbjda6rTEI5aPo-ydfbOPSEcy7rRy94wsMIONsad8x9tbJOq3VqtAW2x5WYsILdZTnWC59oDGF9x3aOKIfQjMgEwnsTAr4JAOR5zrNAhbg__',
+        description:'Pinnawala is a village in Kegalle District of Sri Lanka and is around 90 km from the capital, Colombo.\n \n It is well known for its elephant orphanage.',
+        country:'Sri Lanka',
+        district:'Kegalle',
+        elevation:1041,
+        postalCode:'71100',
+        latitude:'7.3004342',
+        longtitude:'80.3862978',
+        province:'Sabaragamuwa '
+    },
+    {
+        id:3,
+        title:'Sigiriya, Sri Lanka',
+        destinations:8,
+        duration:12,
+        date:'2024-09-09',
+        imageUrl:'https://s3-alpha-sig.figma.com/img/6658/3262/6d9b6e32127391b448bd92a5d7518262?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XZNpvH5uB7PhxwokdBDvPGIW4WhenSUpbs-~vhH4Ptpjsbw992iDd6qN4JP1fTtggxydhJWpQyxHFT2D6GZDvqvG7XF~1jKhCWSyjR7Pf6zWFdHyoSmHAiRYH9cZZbSt9v35rtulu1Eo2t773jYl4jTVzmgU-1xrviBK4T-ul1BTE8rA6mWCPKC1PhCnDj2nFogNeNKQ3oexzjd3OLI-yzyVclcfsm8huE7kph7wsv1lNKAZSz1n7aVBr~okAUOg61544FWNaAPws1spZXZ-wBGjdKVJUD23El19iVjFnu8iOrsJZGWP01pwY0KZ0xIvLvAff~shZwEVn6Mw6PZsNQ__',
+        description:'Sigiriya Lion Rock is an ancient  rock fortress known for its massive column of rock that reaches nearly 200 meters high.\n \n The site dates back to the reign of King Kasyapa (477-495 AD), who chose this site as his new capital.\n \n He decorated the walls with frescoes, and built an impressive palace right on top of the rock column, accessible only through the mouth of an enormous carved lion.',
+        country:'Sri Lanka',
+        district:'Mathale',
+        elevation:1041,
+        postalCode:'12345',
+        latitude:'7.950680',
+        longtitude:'80.752080',
+        province:'Central '
+    },
+    {
+        id:4,
+        title:'Down South, Sri Lanka',
+        destinations:4,
+        duration:6,
+        date:'2024-10-20',
+        imageUrl:'https://s3-alpha-sig.figma.com/img/3ae5/a0c4/f7aa05cc6ccdafeda1976870aa538366?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HQkeYyNq4n6YQRmvw5kLVjXFbJgqkaCWFyE5TeNIJYeetAj2uxcIAqKd0Z9MYY4GFx7lclp9sNZc7fWFkRoo6f6EbBltyvFuU2UEtFnd8VCyrggEPJklHO3IVwdL7t4qDyyDc8HlnU~m3sQXIQeW5eAzoFuxiBB0N9Nwm3fDmj-~cocxAbTjAyJSSUEfyNHExBGqvOVHIs9c3c62a5FSIUWCrWijJy1~f-7kbegBgbgJd5WVKg8fQxst4YnxsgJzuhyvz~RpqzCI15-7EsAL3C8aF3BzvCjcDaSWljHNJPgXDOnqXOwK2Xu8XdQOBqIZbXLTzkZQls0GxRBwvA8EKQ__',
+        description:"Prepare your senses for overload, for the South is Sri Lanka at its most sultry and enticing: a glorious shoreline of dazzling white curves of sand set against emerald forested hills.\n \n Yes, you'll find the region a delight to explore, with each bend in the coastal highway revealing yet another idyllic cove to investigate.",
+        country:'Sri Lanka',
+        district:'Matara',
+        elevation:1041,
+        postalCode:'12345',
+        latitude:'5.949310',
+        longtitude:'80.535362',
+        province:'Southern '
     },
 ]
 export default TripsList

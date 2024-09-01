@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "644847967012",
+    "project_id": "drimingo-4a9a0",
+    "storage_bucket": "drimingo-4a9a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644847967012:android:c193761829e87e13ffb1b1",
+        "android_client_info": {
+          "package_name": "com.drimingo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644847967012-je3isoko6lmjbotqvchtp8pb1s63ii8g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.drimingo",
+            "certificate_hash": "b68f795ff7e7c260014d971c3605fe2b8b88f071"
+          }
+        },
+        {
+          "client_id": "644847967012-n55bavv7u1sl6bjno9lq2b7318cpav3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.drimingo",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "644847967012-08gn0fpknfuijt90de0uj95re7ro2pnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7-Zi1NXL9yViRRHIYdHhbeztZOdnBLjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644847967012-08gn0fpknfuijt90de0uj95re7ro2pnd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

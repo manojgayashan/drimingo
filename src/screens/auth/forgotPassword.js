@@ -46,12 +46,12 @@ export default function ForgotPassword({ onClose, animation, joinNowBottomSheetR
                     <>
                         <View style={CommanStyles.row}>
                             <DgoButton onPress={onClose} icon={<AntDesign name="close" size={20} color={Colors.dgo_black_100} />} />
-                            <Text style={CommanStyles.font18}>Forgot Password?</Text>
+                            <Text style={[CommanStyles.font18,{paddingLeft:10}]}>Forgot Password?</Text>
                         </View>
                         <View>
                             <View style={CommanStyles.innerContainer}>
                                 <View>
-                                    <Text style={CommanStyles.font12}>Enter your registered email down below to start the password rest process. We’ll send you reset code via email.</Text>
+                                    <Text style={CommanStyles.font12Gray}>Enter your registered email down below to start the password rest process. We’ll send you reset code via email.</Text>
                                     <DgoTextInput
                                         value={email}
                                         onChangeText={setEmail}
@@ -96,12 +96,12 @@ export default function ForgotPassword({ onClose, animation, joinNowBottomSheetR
                         <>
                             <View style={CommanStyles.row}>
                                 <DgoButton onPress={onClose} icon={<AntDesign name="close" size={20} color={Colors.dgo_black_100} />} />
-                                <Text style={CommanStyles.font18}>Forgot Password?</Text>
+                                <Text style={[CommanStyles.font18,{paddingLeft:10}]}>Forgot Password?</Text>
                             </View>
-                            <Animatable.View animation={'fadeInUp'}>
+                            <Animatable.View animation={'fadeInRight'}>
                                 <View style={CommanStyles.innerContainer}>
                                     <View>
-                                        <Text style={[CommanStyles.font12, { paddingVertical: 5,marginBottom:10 }]}>You'll receive a temporary reset code via email. Please enter it below to update your password.</Text>
+                                        <Text style={[CommanStyles.font12Gray, { paddingVertical: 5,marginBottom:10 }]}>You'll receive a temporary reset code via email. Please enter it below to update your password.</Text>
                                         <Text style={CommanStyles.font14}>Verification Code</Text>
                                         <CodeField
                                             ref={ref}
@@ -124,7 +124,7 @@ export default function ForgotPassword({ onClose, animation, joinNowBottomSheetR
                                                 </Text>
                                             )}
                                         />
-                                        <Text style={[CommanStyles.font12, { paddingVertical: 5 }]}>sometimes It’ll take few seconds to receive. This code will expire within a 10 mins. </Text>
+                                        <Text style={[CommanStyles.font12Gray, { paddingVertical: 5 }]}>sometimes It’ll take few seconds to receive. This code will expire within a 10 mins. </Text>
 
                                         <DgoButton
                                             title='Confirm'
@@ -174,9 +174,9 @@ export default function ForgotPassword({ onClose, animation, joinNowBottomSheetR
                         <>
                             <View style={CommanStyles.row}>
                                 <DgoButton onPress={onClose} icon={<AntDesign name="close" size={20} color={Colors.dgo_black_100} />} />
-                                <Text style={CommanStyles.font18}>Add New password</Text>
+                                <Text style={[CommanStyles.font18,{paddingLeft:10}]}>Add New password</Text>
                             </View>
-                            <Animatable.View key={step3Key} animation={'fadeInUp'}>
+                            <Animatable.View key={step3Key} animation={'fadeInRight'}>
                                 <View style={CommanStyles.innerContainer}>
                                     <View>
                                     <DgoTextInput
@@ -204,7 +204,7 @@ export default function ForgotPassword({ onClose, animation, joinNowBottomSheetR
                                          <Text style={[CommanStyles.font14,{color:Colors.dgo_black_200}]}>{PasswordStrengthData[passwordStrength].title}</Text>
                                        
                                     </View>
-                                        <Text style={[CommanStyles.font12, { paddingVertical: 5,paddingBottom:20 }]}>Minimum of 8 characters, with upper and lowercase letters and any number, or acceptable characters like @ sign.</Text>
+                                        <Text style={[CommanStyles.font12Gray, { paddingVertical: 5,paddingBottom:20 }]}>Minimum of 8 characters, with upper and lowercase letters and any number, or acceptable characters like @ sign.</Text>
 
                                         <DgoTextInput
                                         value={confirmPassword}

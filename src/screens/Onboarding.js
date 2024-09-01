@@ -30,7 +30,7 @@ export default function Onboarding() {
 
     const [isToggle, setIsToggle] = useState(true);
     const [key, setKey] = useState(1)
-    const [autoPlay, setAutoPlay] = useState(false)
+    const [autoPlay, setAutoPlay] = useState(true)
 
     let toggled = false
     let fpToggled = false
@@ -150,9 +150,9 @@ export default function Onboarding() {
     const signInBottomSheet = useRef();
     const joinNowBottomSheet = useRef();
     const forgotPasswordBottomSheet = useRef();
-    const joinNowSnapPoints = useMemo(() => [(windowHeight - (Platform.OS == 'android' ? 20 : 65))], []);
-    const signInSnapPoints = useMemo(() => [(windowHeight - (Platform.OS == 'android' ? 20 : 50))], []);
-    const fogrotPasswordSnapPoints = useMemo(() => [(windowHeight - (Platform.OS == 'android' ? 20 : 0))], []);
+    const joinNowSnapPoints = useMemo(() => [(windowHeight - (Platform.OS == 'android' ? 25 : 65))], []);
+    const signInSnapPoints = useMemo(() => [(windowHeight - (Platform.OS == 'android' ? 5 : 50))], []);
+    const fogrotPasswordSnapPoints = useMemo(() => [(windowHeight - (Platform.OS == 'android' ? 10 : 0))], []);
 
     const renderBackdrop = useCallback(
         props => (
@@ -210,6 +210,51 @@ export default function Onboarding() {
         <View style={CommanStyles.onbordingContainer}>
             <StatusBar translucent backgroundColor={'transparent'} barStyle={'light-content'} />
 
+                
+                <Carousel key={key} data={OnboardingData} currentIndex={0} autoPlay={autoPlay} toggle={isToggle} />
+
+                <View style={CommanStyles.onboardingBottomContainer}>
+                        <View>
+                            {/* <DgoButton
+                                title='Join Now'
+                                width='full'
+                                accent='white'
+                                buttonRadius='rectangle-round'
+                                buttonType='filled'
+                                borderWidth={2}
+                                onPress={() => { joinNowBottomSheet.current.snapToIndex(0); animateElement(false) }}
+                            />
+                            <DgoButton
+                                title='Sign In'
+                                width='full'
+                                accent='white'
+                                buttonRadius='rectangle-round'
+                                buttonType='line'
+                                borderWidth={2}
+                                onPress={() => { signInBottomSheet.current.snapToIndex(0); animateElement(false) }}
+                            /> */}
+                            
+                        </View>
+                        <DgoButton
+                                title='Continue'
+                                width='full'
+                                accent='white'
+                                buttonRadius='rectangle-round'
+                                buttonType='filled'
+                                borderWidth={2}
+                                onPress={()=>{navigation.navigate('Onboarding_2')}}
+                                />
+                        <DgoButton
+                            title='Skip'
+                            width='full'
+                            accent='white'
+                            buttonRadius='rectangle-round'
+                            buttonType='line'
+                            borderWidth={0}
+                            // rightIcon={<AntDesign name="arrowright" size={20} color={Colors.dgo_white_600} />}
+                            onPress={()=>navigation.navigate('Payment')}
+                        />
+                    </View>
             <BottomSheet
                 ref={signInBottomSheet}
                 snapPoints={signInSnapPoints}
@@ -223,7 +268,7 @@ export default function Onboarding() {
             >
                 <Animated.View style={[CommanStyles.bottomSheetView, animationBSStyle]}>
                     <BottomSheetView style={CommanStyles.signInContentContainer}>
-                        <SignIn forgotPasswordBottomSheetRef={forgotPasswordBottomSheet} joinNowBottomSheetRef={joinNowBottomSheet} animation={animateBottomSheet} onClose={() => { signInBottomSheet.current.close() }} />
+                        <SignIn navigation={navigation} forgotPasswordBottomSheetRef={forgotPasswordBottomSheet} joinNowBottomSheetRef={joinNowBottomSheet} animation={animateBottomSheet} onClose={() => { signInBottomSheet.current.close() }} />
                     </BottomSheetView>
                 </Animated.View>
             </BottomSheet>
@@ -265,49 +310,7 @@ export default function Onboarding() {
 
 
             {/* <Animated.View style={[{ height: windowHeight + 50, position: 'absolute', zIndex: -1, width: windowWidth }, animationStyle]}> */}
-            <View style={[CommanStyles.appContainer, { zIndex: -1 }]}>
-                <View style={CommanStyles.onboardingContainer}>
-                    <View style={CommanStyles.center}>
-                        <Image source={require('../assets/images/drimingo_logo.png')} style={CommanStyles.onboardingLogo} />
-                        <Text style={CommanStyles.onboardingTitle}>Learn the local {'\n'}culture and customs</Text>
-                        <Text style={CommanStyles.onboardingSubTitle}>Sub test goes here explaining the title {'\n'}above and few extra information.</Text>
-                    </View>
-                    <View style={CommanStyles.onboardingBottomContainer}>
-                        <View>
-                            <DgoButton
-                                title='Join Now'
-                                width='full'
-                                accent='white'
-                                buttonRadius='rectangle-round'
-                                buttonType='filled'
-                                borderWidth={2}
-                                onPress={() => { joinNowBottomSheet.current.snapToIndex(0); animateElement(false) }}
-                            />
-                            <DgoButton
-                                title='Sign In'
-                                width='full'
-                                accent='white'
-                                buttonRadius='rectangle-round'
-                                buttonType='line'
-                                borderWidth={2}
-                                onPress={() => { signInBottomSheet.current.snapToIndex(0); animateElement(false) }}
-                            />
-                        </View>
-
-                        <DgoButton
-                            title='Continue as Guest'
-                            width='full'
-                            accent='white'
-                            buttonRadius='rectangle-round'
-                            buttonType='line'
-                            borderWidth={0}
-                            rightIcon={<AntDesign name="arrowright" size={20} color={Colors.dgo_white_600} />}
-                            onPress={()=>navigation.navigate('Home')}
-                        />
-                    </View>
-                </View>
-                <Carousel key={key} data={OnboardingData} currentIndex={0} autoPlay={autoPlay} toggle={isToggle} />
-            </View>
+            
             {/* </Animated.View> */}
 
 

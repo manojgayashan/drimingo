@@ -82,10 +82,10 @@ export default function Home() {
 
   return (
     <Tab.Navigator tabBar={props => <MyTabBar {...props} />} screenOptions={{headerShown:false}}>
-      <Tab.Screen name="Search" component={Search} />
-      <Tab.Screen name="Trips" component={Trips} />
-      <Tab.Screen name="Saved" component={Saved} />
-      <Tab.Screen name="You" component={You} />
+      <Tab.Screen name="Search" component={Search} options={{unmountOnBlur:true}}  />
+      <Tab.Screen name="Trips" component={Trips} options={{unmountOnBlur:true}} />
+      <Tab.Screen name="Saved" component={Saved} options={{unmountOnBlur:true}}  />
+      <Tab.Screen name="You" component={You} options={{unmountOnBlur:true}}  />
     </Tab.Navigator>
   );
 }
